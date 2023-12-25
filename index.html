@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="card bg-white mt-5 ">
+            <div class="header text-center mt-5 ">
+
+                <h2>TO-<SPAN class="text-info ">DO</SPAN>-List</h2>
+                <div class="row">
+                    <div
+                        class="col col-6 text-center my-4 d-flex flex-row justify-content-center align-items-center mx-auto  ">
+                        <input onkeyup="searchTask(this.value)" type="email" class="form-control mx-4"
+                            id="exampleFormControlInput1" placeholder="search by Task Name">
+
+                        <input onkeyup="searchContent(this.value)" type="email" class="form-control"
+                            id="exampleFormControlInput1" placeholder="search by Task content">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <label for="exampleFormControlInput1" class="form-label mt-3 ">TASK NAME</label>
+                <input type="email" class="form-control  py-3" id="taskInput" placeholder="Enter Task Name">
+
+                <label for="exampleFormControlInput1" class="form-label mt-3">TASK CONTENT</label>
+                <input type="email" class="form-control  py-3" id="contentInput" placeholder="Enter Task content">
+                <button onclick="taskFunc()" id="addTaskBtn"
+                    class="btn btn-info text-white  text-center mt-3 d-block mx-auto "> Add
+                    Task</button>
+                <button onclick="updateTask()" id="updateTaskBtn"
+                    class="btn btn-warning  text-white  text-center mt-3 d-block mx-auto d-none">
+                    Update
+                    Task</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body mt-5">
+                <table class="table text-center px-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Task Name</th>
+                            <th scope="col">Task Content</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+<!-- bootstrap js -->
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+<!-- sweetalert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- js file -->
+<script src="main.js"></script>
+
+</html>
